@@ -1,0 +1,39 @@
+@use 'sass:math';
+@use '../global/setting' as *;
+
+:root {
+  --vh: 100vh;
+  --baseFont: 16px;
+  --baseColor: #333;
+}
+
+html {
+  font-size: var(--baseFont);
+  color: var(--baseColor);
+}
+
+body {
+  display:flex;
+  flex-direction: column;
+  min-height:100vh;
+}
+
+/* pcの電話番号発信対応 */
+a[href^='tel:'] {
+  pointer-events: none;
+  @include mq('md') {
+    pointer-events: auto;
+  }
+}
+
+/* ホバー */
+a {
+  transition: opacity 0.3s ease-out;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+

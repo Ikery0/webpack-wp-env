@@ -1,0 +1,21 @@
+{
+  "env": {
+    "browser": true,
+    "es2022": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    // "ecmaVersion": 2022,
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "globals": {
+    "jQuery": "readonly",
+    "$": "readonly"
+  },
+
+  "rules": {
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }]
+  }
+}
