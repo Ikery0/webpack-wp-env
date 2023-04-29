@@ -16,9 +16,9 @@
 ## **dataフォルダ内について**
 - plugins内にプラグインを格納(勝手に入る)
 - sqlにデータベースを格納(importとexportが必要)
-- ↓ データベースのデータをexport
+- ↓ データベースのデータをexport <br>
 ```$ npm run wp-env run cli wp db export sql/wpenv.sql ```
-- ↓データベースのデータをimport
+- ↓データベースのデータをimport <br>
 ```$ npm run wp-env run cli wp db import sql/wpenv.sql ```
 <br>
 
