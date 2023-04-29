@@ -36,7 +36,7 @@ class SmoothScrollTween {
     window.scrollTo(
       0,
       //「アニメーションの経過時間」,「始点」,「変化量」,「変化にかける時間」
-      this.easing.easeOut(elapsedTime, start, stop, this.duration),
+      this.easing.easeOut(elapsedTime, start, stop, this.duration)
     );
 
     requestAnimationFrame(this._animationFrame.bind(this));
@@ -63,7 +63,7 @@ export class SmoothScroll extends SmoothScrollTween {
 
   _getArgs(e) {
     e.preventDefault();
-    const $target = e.target;
+    const $target = e.target.tagName === 'A' ? e.target : e.currentTarget;
 
     //スクロールイベント重複防止
     if (this.DOM.body.classList.contains('is-scroll-busy')) {
